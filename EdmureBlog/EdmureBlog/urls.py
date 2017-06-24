@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.conf.urls import include
 from django.contrib import admin
-
+from testyanz import views
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^backend/', include('backend.urls')),
-    url(r'^', include('web.urls')),
+    url(r'^/web', include('web.urls')),
+    url(r'^yanzhen', views.login),
+    url(r'^check_code.html', views.check_code),
 ]

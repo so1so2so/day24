@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from django.conf.urls import include
-from .views import user
+from views import user
 
 urlpatterns = [
     url(r'^base-info.html$', user.base_info),
